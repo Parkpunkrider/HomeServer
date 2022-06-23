@@ -1,0 +1,14 @@
+
+{
+    "settings": [
+        {
+            "provider": "noip",
+            "domain": "ddns.net",
+            "host": "<myHost>",
+            "username": "<myEmailaddress>",
+            "password": "<myPassword>",
+            "ip_version": "ipv4",
+            "provider_ip": true
+        }
+    ]
+}

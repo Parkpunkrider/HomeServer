@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "SSH FS - darkesp-server",
+			"uri": "ssh://darkesp-server/home/mara"
+		}
+	],
+	"settings": {}
+}
