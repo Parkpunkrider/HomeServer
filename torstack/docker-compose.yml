@@ -66,7 +66,7 @@ services:
       - TZ=Europe/Berlin
     restart: unless-stopped
 
- radarr: #Manages literature
+ radarr: #Manages movies
     image: linuxserver/radarr
     network_mode: "service:transmission-openvpn"
     container_name: radarr
@@ -81,7 +81,7 @@ services:
         - /data/downloads/radarr:/media
     restart: unless-stopped
  
- sonarr: #Manages literature
+ sonarr: #Manages tv shows
     image: linuxserver/sonarr
     network_mode: "service:transmission-openvpn"
     container_name: sonarr
