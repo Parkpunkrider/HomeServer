@@ -1,0 +1,48 @@
+# docker-compose.yml
+version: '3.1'
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+  transmission-openvpn:
+    image: haugene/transmission-openvpn:latest
+  radarr:
+    image: linuxserver/radarr:latest
+  sonarr:
+    image: linuxserver/sonarr:latest
+  lidarr:
+    image: linuxserver/lidarr:latest
+  lazylibrarian:
+    image: linuxserver/lazylibrarian:latest
+  jackett:
+    image: linuxserver/jackett:latest
+  flaresolverr:
+    image: flaresolverr/flaresolverr:latest
+  autohealer:
+    image: willfarrell/autoheal:latest
+  homer:
+    image: b4bz/homer:latest
+  homeassistant:
+    image: homeassistant/home-assistant:stable
+  gitea:
+    image: gitea/gitea:latest
+  mysql:
+    image: mysql:latest
+  ddns-updater:
+    image: qmcgaw/ddns-updater:latest
+  jellyfin:
+    image: docker.io/linuxserver/jellyfin:latest
+  calibre:
+    image: linuxserver/calibre
+  vaultwarden:
+    image: vaultwarden/server:latest
+  pihole:
+    image: pihole/pihole:latest
+  webserver:
+    image: httpd:latest
+# websitemirror:
+#   image: robertdebock/mirror:latest
+#Currently not in use
+#  rancher:
+#    image: rancher/rancher:latest
+#  grocy:
+#    image: lscr.io/linuxserver/grocy:latest

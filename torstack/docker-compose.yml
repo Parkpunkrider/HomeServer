@@ -13,8 +13,8 @@ services:
         - CREATE_TUN_DEVICE=true
         - OPENVPN_PROVIDER=custom
         - OPENVPN_CONFIG=custom
-        - OPENVPN_USERNAME=FHJaprvfxY
-        - OPENVPN_PASSWORD=nSUNkK62Ef
+        - OPENVPN_USERNAME=<Username>
+        - OPENVPN_PASSWORD=<Password>
         - OPENVPN_OPTS=--inactive 3600 --ping 10 --ping-exit 60
         - WEBPROXY_ENABLED=false
         - LOCAL_NETWORK=192.168.188.0/24
@@ -54,7 +54,7 @@ services:
         #Jackett only needs config
     restart: unless-stopped
 
- flaresolverr: # Software emulates Browser to solve captchas
+ flaresolverr: # Software emulates Browser to solve captchas (only needed with specific vpn locations and providers)
     # DockerHub mirror flaresolverr/flaresolverr:latest
     image: ghcr.io/flaresolverr/flaresolverr:latest
     container_name: flaresolverr
@@ -118,8 +118,8 @@ services:
     environment:
         - PUID=1000
         - PGID=1000
-         - TZ=Europe/Berlin
-        #- DOCKER_MODS=linuxserver/calibre-web:calibre #optional (Webreader for Ebooks basically)
+        - TZ=Europe/Berlin
+        #- DOCKER_MODS=linuxserver/calibre-web:calibre #optional (Webreader for Ebooks, installed separately on this system)
     volumes:
         - /data/downloads/openvpn:/data/completed
         - /var/configs/lazylibrarian:/config
