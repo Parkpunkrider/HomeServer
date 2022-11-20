@@ -1,6 +1,6 @@
 # HomeServer
 My Home Server Project, with a bunch of selfhosted apps.
-Almost all of them are currently running in docker containers and are managed via portainer.
+Most of them are currently running in docker containers and are managed via portainer.
 
 #### Docker Compose Files
 A Collection of docker-compose files running on my home server.
