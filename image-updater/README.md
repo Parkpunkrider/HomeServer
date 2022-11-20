@@ -10,4 +10,4 @@ Now purge the unused images with "docker image prune"
 
 Updating with Makefile:
 execute: "make routineupdate"
-purge unused: 
+purge unused images: "make pruneunused"

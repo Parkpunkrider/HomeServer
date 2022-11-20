@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  webserver:
+    image: httpd
+    container_name: webserver
+    network_mode: bridge
+    ports:
+      - 7080:80
+    volumes:
+      - /ssd2/httpd/web/<webserver-folder>:/usr/local/apache2/htdocs #Path mapping for folder with webpages (folder name changed)
+      - /ssd2/httpd/web/logs:/usr/local/apache2/logs #Path mapping for log file folder
+      - /etc/localtime:/etc/localtime:ro # container use the localtime of the host system
+    environment:
+      - ServerName=<hostname>
+    user: 1000:1000
+    restart: unless-stopped
