@@ -1,3 +1,4 @@
 ## Local Mirror of a Website
-Updates from wenbsite daily by cloning a github repo.
-Cronejob executes download and backup script daily.
+Updates website daily by cloning a github repo.
+The website is also backed up daily.
+A Cronejob executes the download and backup script.
