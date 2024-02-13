@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  filebrowser:
+    image: hurlenko/filebrowser
+    container_name: filebrowser
+    user: "1000:1000"
+    ports:
+      - 6080:8080
+    volumes:
+      - /data:/data
+      - /ssd2/filebrowser:/config
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - FB_BASEURL=/filebrowser
+    restart: unless-stopped

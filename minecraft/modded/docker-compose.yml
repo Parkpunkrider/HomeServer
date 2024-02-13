@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  mc:
+    image: itzg/minecraft-server
+    container_name: mc-modded
+    environment:
+      EULA: "true"
+      ENABLE_RCON: "true"
+      TYPE: FTBA
+      VIEW_DISTANCE: 12
+      MEMORY: 8G
+      CONSOLE: "false"
+      FTB_MODPACK_ID: 100 #FTB StoneBlock 3
+      FTB_MODPACK_VERSION_ID: 6647 #Version 1.8.0
+    ports:
+      - 25565:25565
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /ssd2/minecraft:/data
+    restart: unless-stopped
